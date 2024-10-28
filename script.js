@@ -89,8 +89,6 @@ console.log(an.num5);
 
 
 //5. Create a self-invoking function to console you name.
-function getName() {
-    return "Arjun";
-}
-
-console.log(getName());
+(function() {
+    console.log("Arjun");
+})();
