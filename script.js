@@ -58,8 +58,8 @@ let numbers = [1, 2, 3, 4, 5, 6];
 
 let deleteIndexes = (array) => {
     return () => {
-        array.splice(4, 1); 
-        array.splice(1, 1); 
+        array.splice(4, 1);
+        array.splice(1, 1);
         return array;
     };
 };
@@ -71,24 +71,19 @@ console.log(newArray());
 
 
 //4. Use constructor method to console all elements of the passed array. (the array will be passed to the constructor method)
-function arrayNumber(num1, num2, num3, num4, num5){
-    this.num1=num1;
-    this.num2=num2;
-    this.num3=num3;
-    this.num4=num4;
-    this.num5=num5;
+
+class array4 {
+    constructor(array) {
+        array.forEach(element => console.log(element));
+    }
 }
 
-const an= new arrayNumber(1,2,3,4,5);
+const arr = [1, 2, 3, 4, 5];
+const print = new array4(arr);
 
-console.log(an.num1);
-console.log(an.num2);
-console.log(an.num3);
-console.log(an.num4);
-console.log(an.num5);
 
 
 //5. Create a self-invoking function to console you name.
-(function() {
+(function () {
     console.log("Arjun");
 })();
